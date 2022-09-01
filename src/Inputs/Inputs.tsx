@@ -1,3 +1,5 @@
 import { ComponentType } from "react";
 
-const Inputs: ComponentType;
+const Inputs: ComponentType = () => {
+  return <div></div>;
+};
