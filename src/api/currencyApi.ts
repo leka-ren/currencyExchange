@@ -5,7 +5,6 @@ interface GetCurrencyExchangeArgs {
   to: string;
   amound: string | number;
 }
-const apiCurrencyExchange = `https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amound}`;
 const apikey = "yI56o6WgSS0IloSAKUMQfchgfmeIHSsX";
 
 export const getCurrencyExchange = ({
@@ -13,6 +12,7 @@ export const getCurrencyExchange = ({
   to,
   amound,
 }: GetCurrencyExchangeArgs) => {
+  const apiCurrencyExchange = `https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amound}`;
   return axios(apiCurrencyExchange, {
     headers: {
       apikey,
