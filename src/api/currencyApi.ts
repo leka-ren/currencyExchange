@@ -1,10 +1,21 @@
 import axios from "axios";
 
-export const currencyApi = (
-  amount: string | number,
-  from: string,
-  to: string
-) => {
-  return axios(`fetch("https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amount}
-    `);
+interface GetCurrencyExchangeArgs {
+  from: string;
+  to: string;
+  amound: string | number;
+}
+const apiCurrencyExchange = `https://api.apilayer.com/fixer/convert?to=${to}&from=${from}&amount=${amound}`;
+const apikey = "yI56o6WgSS0IloSAKUMQfchgfmeIHSsX";
+
+export const getCurrencyExchange = ({
+  from,
+  to,
+  amound,
+}: GetCurrencyExchangeArgs) => {
+  return axios(apiCurrencyExchange, {
+    headers: {
+      apikey,
+    },
+  });
 };
