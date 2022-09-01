@@ -1,0 +1,16 @@
+.input {
+  width: 200px;
+  background-color: #ffffff0b;
+  border: solid #fceded26 1px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  padding: 5px;
+  color: #fff;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

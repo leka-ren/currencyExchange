@@ -1,0 +1,35 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectInputs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.inputGroupContent {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 100px;
+}
+
+.text {
+  color: #fff;
+}
+
+.button {
+  background-color: #6c6c6c;
+  border: solid #fceded26 1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  outline: none;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+}
