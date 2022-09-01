@@ -5,10 +5,14 @@ import {
   setExchangeValue,
   setFromCurrencyExchange,
   setToCurrencyExchange,
+  submitHandler,
 } from "./Inputs.model";
 import styles from "./Inputs.module.css";
 
 export const Inputs: ComponentType = () => {
+  const inputHandler = (event: React.FormEvent<HTMLInputElement>) => {
+    setExchangeValue(event.currentTarget.value || "");
+  };
   return (
     <div className={styles.content}>
       <div className={styles.selectInputs}>
@@ -18,12 +22,19 @@ export const Inputs: ComponentType = () => {
         </div>
         <div className={styles.inputGroupContent}>
           <p className={styles.text}>В:</p>
-          <SelectInput revers={true} handler={setToCurrencyExchange} />
+          <SelectInput handler={setToCurrencyExchange} />
         </div>
       </div>
       <div>
-        <TextInput handler={setExchangeValue} />
-        <button className={styles.button}>клик</button>
+        <TextInput handler={inputHandler} />
+        <button
+          onClick={() => {
+            submitHandler();
+          }}
+          className={styles.button}
+        >
+          клик
+        </button>
       </div>
     </div>
   );

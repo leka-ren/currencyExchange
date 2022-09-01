@@ -1,19 +1,15 @@
+import { useStore } from "effector-react";
 import { ComponentType } from "react";
+import { $currencys } from "./SelectInput.model";
 
 import styles from "./SelectInput.module.css";
 
 interface SelectInputProps {
   handler: (currency: string) => void;
-  revers?: boolean;
 }
 
-export const SelectInput: ComponentType<SelectInputProps> = ({
-  handler,
-  revers = false,
-}) => {
-  const currencyNames = revers
-    ? ["USD", "EUR", "GBP", "CNY", "RUB"].reverse()
-    : ["USD", "EUR", "GBP", "CNY", "RUB"];
+export const SelectInput: ComponentType<SelectInputProps> = ({ handler }) => {
+  const currencys = useStore($currencys);
 
   const onChangeHandler = (e: any) => {
     handler(e.target.value);
@@ -25,10 +21,14 @@ export const SelectInput: ComponentType<SelectInputProps> = ({
       onChange={onChangeHandler}
       name="currencys"
       id="currencys"
+      defaultValue={"choose"}
     >
-      {currencyNames.map((el) => (
-        <option key={el} value={el}>
-          {el}
+      <option value={"choose"} disabled>
+        Валюта
+      </option>
+      {currencys.map((currency) => (
+        <option key={currency} value={currency}>
+          {currency}
         </option>
       ))}
     </select>
