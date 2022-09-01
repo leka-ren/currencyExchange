@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/leka-ren.github.io/currencyExchange/static/css/main.fcf0e4b8.css",
+    "main.js": "/leka-ren.github.io/currencyExchange/static/js/main.f1e928dd.js",
+    "index.html": "/leka-ren.github.io/currencyExchange/index.html",
+    "main.fcf0e4b8.css.map": "/leka-ren.github.io/currencyExchange/static/css/main.fcf0e4b8.css.map",
+    "main.f1e928dd.js.map": "/leka-ren.github.io/currencyExchange/static/js/main.f1e928dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fcf0e4b8.css",
+    "static/js/main.f1e928dd.js"
+  ]
+}
